@@ -1,0 +1,161 @@
+@media (max-width: 992px) {
+  .nav {
+    margin-bottom: 5rem;
+  }
+
+  .nav__links {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu__wrap {
+    position: fixed;
+    top: 1.4rem;
+    right: 0.5rem;
+    z-index: 1;
+  }
+
+  .menu__wrap .toggler {
+    position: absolute;
+    top: 1.6rem;
+    right: 0;
+
+    z-index: 2;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    display: block;
+  }
+
+  .menu__wrap .hamburger {
+    position: absolute;
+    top: 1.6rem;
+    right: 0;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    padding: 1rem;
+    background: var(--gradient-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu__wrap .hamburger > div {
+    position: relative;
+    /* right:0 */
+    flex: none;
+    width: 100%;
+    height: 3px;
+    /* background: var(--gradient-primary); */
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+  }
+
+  .menu__wrap .hamburger > div::before,
+  .menu__wrap .hamburger > div::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    /* background: var(--gradient-primary); */
+    width: 100%;
+    height: 3px;
+    background-color: inherit;
+  }
+
+  .menu__wrap .hamburger > div::before {
+    top: -10px;
+  }
+  .menu__wrap .hamburger > div::after {
+    top: 10px;
+  }
+
+  .menu__wrap .toggler:checked + .hamburger > div {
+    transform: rotate(135deg);
+  }
+
+  .menu__wrap .toggler:checked + .hamburger > div:before,
+  .menu__wrap .toggler:checked + .hamburger > div:after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+
+  .menu__wrap .toggler:checked:hover + .hamburger > div {
+    transform: rotate(225deg);
+  }
+
+  .menu__wrap .toggler:checked ~ .menu {
+    visibility: visible;
+  }
+
+  .menu__wrap .toggler:checked ~ .menu > div {
+    transform: scale(1);
+    transition-duration: 1.2s;
+  }
+
+  .menu__wrap .toggler:checked ~ .menu > div > div {
+    opacity: 1;
+    transition: opacity 0.4s ease 0.4s;
+  }
+
+  .menu__wrap .menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Menu Overlay Dark Part | We  will set scale to zero so as to hide the div before clickikg*/
+  .menu__wrap .menu > div {
+    background: var(--overlay-color);
+    border-radius: 50%;
+    width: 300vw;
+    height: 300vw;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: all 0.6s ease;
+  }
+
+  .menu__wrap .menu > div > div {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vw;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .menu__wrap .menu > div > div > ul > li {
+    list-style: none;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 0.8rem 5.8rem 0.8rem 0.8rem;
+    text-align: center;
+  }
+
+  .menu__wrap .menu > div > div > ul > li > a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.4s ease;
+  }
+
+  .menu__wrap .menu > div > div > ul > li > a:hover {
+    color: var(--secondary-color);
+  }
+
+  .features {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
