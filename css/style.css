@@ -233,15 +233,21 @@ h4 {
 }
 
 /* FEATURES */
-.features {
+/* .features {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 4rem;
   margin: 0 12rem;
+} */
+
+.box {
+  display: flex;
+  gap: 5rem;
+  margin: 3rem 12rem;
 }
 
 .features__img {
-  width: 100%;
+  width: 50%;
 }
 
 .features__feature {
