@@ -181,8 +181,12 @@
 }
 
 @media (max-width: 680px) {
-  .section {
-    /* padding: 0; */
+  .testimonial__author {
+    margin-bottom: 8rem;
+  }
+
+  .testimonial__text {
+    /* margin-bottom: 0; */
   }
 
   .box {

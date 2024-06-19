@@ -483,6 +483,7 @@ h4 {
 .testimonial {
   width: 65%;
   position: relative;
+  /* height: 100%; */
 }
 
 .testimonial::before {
