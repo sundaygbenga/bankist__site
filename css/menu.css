@@ -15,12 +15,15 @@
   }
 
   .menu__wrap {
-    position: absolute;
+    position: fixed;
     top: 1.4rem;
     right: 0.5rem;
     z-index: 1;
   }
 
+  #section--1 {
+    margin-top: 5rem;
+  }
   .menu__wrap .toggler {
     position: absolute;
     top: 1.6rem;

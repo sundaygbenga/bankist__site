@@ -323,6 +323,19 @@ const slider = function () {
 };
 slider();
 
+// Close the toggler after clicking an action
+const menu = document.querySelector('.menu');
+const toggler = document.querySelector('input[type="checkbox"]');
+
+function removeChecked() {
+  toggler.checked = false;
+}
+
+menu.addEventListener('click', function (e) {
+  e.preventDefault();
+  removeChecked();
+});
+
 //////////////////////////////////////////////////////////////////////////////////////
 // SELECTING CREATING AND DELETING ELEMENTS
 /*
