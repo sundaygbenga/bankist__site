@@ -164,6 +164,8 @@ const stickyNav = function (entries, headerObserver) {
 
   if (!entry.isIntersecting) nav.classList.add('sticky');
   else nav.classList.remove('sticky');
+
+  if (window.screen.width <= 992) nav.classList.remove('sticky');
 };
 const obsOptions = {
   root: null,
